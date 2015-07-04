@@ -1,0 +1,23 @@
+{
+  "repos": [
+    {
+      "url": "https://github.com/borisyankov/DefinitelyTyped.git",
+      "ref": "master"
+    }
+  ],
+  "path": "typings",
+  "bundle": "typings/bundle.d.ts",
+  "link": {
+    "npm": {
+      "include": true
+    }
+  },
+  "dependencies": {
+      "google-apps-script/google-apps-script.spreadsheet.d.ts": {
+          "repo": "https://github.com/motemen/dts-google-apps-script"
+      },
+      "google-apps-script/google-apps-script.url-fetch.d.ts": {
+          "repo": "https://github.com/motemen/dts-google-apps-script"
+      }
+  }
+}

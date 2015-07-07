@@ -9,6 +9,7 @@ Google Apps Script that schedules automated posts to Slack using Spreadsheets
 3. Create a https://docs.google.com/spreadsheets/[Google Spreadsheet] with first row contains two cells, "date" and "hour" in this order.
 4. In the sheet, follow the menu "Tools" > "Script editor...". Replace all of the code there with the contents of app.js.
 5. In the script, follow the menu "Resources" > "Current project's triggers". "Add a new trigger" with "Run" of `doPost`, "Events" "Time-driven", "Hour timer" and "Every hour".
+6. For the first time, follow the menu "Run" > "doPost" to authorize the script to post to Slack.
 
 == Configuration
 

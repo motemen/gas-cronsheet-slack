@@ -3,13 +3,14 @@
 var WEBHOOK_URL = 'SET URL LIKE https://hooks.slack.com/services/****/****/****';
 var SLACK_USERNAME = 'cronsheet';
 var SLACK_ICON_EMOJI = ':clock3:';
+var SHEET_NAME = null;
 // ... END Configuration
 var COLUMN_DATE = 1;
 var COLUMN_HOUR = 2;
 var COLUMN_START_MESSAGE = 3;
 function doPost() {
     var now = new Date();
-    var sheet = SpreadsheetApp.getActiveSheet();
+    var sheet = SHEET_NAME ? SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME) : SpreadsheetApp.getActiveSheet();
     var maxRows = sheet.getMaxRows(), maxCols = sheet.getMaxColumns();
     var headerValues = sheet.getRange(1, 1, 1, maxCols).getValues()[0];
     for (var r = 2; r <= maxRows; r++) {
